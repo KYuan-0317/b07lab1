@@ -177,7 +177,7 @@ public static String convert_str(double d, int i) {
 
 public void saveToFile(String filename) throws IOException {
 	File file = new File(filename);
-	FileWriter writer = new FileWriter(file);
+	FileWriter writer = new FileWriter(file, true);
 	int[] exp = this.exponents;
 	double[] coe = this.coefficients;
 	int len = exp.length;
