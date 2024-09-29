@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-import java.io.Writer;
 import java.io.FileWriter;
 
 
@@ -178,7 +177,7 @@ public static String convert_str(double d, int i) {
 
 public void saveToFile(String filename) throws IOException {
 	File file = new File(filename);
-	Writer writer = new FileWriter(file);
+	FileWriter writer = new FileWriter(file);
 	int[] exp = this.exponents;
 	double[] coe = this.coefficients;
 	int len = exp.length;
