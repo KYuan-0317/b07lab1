@@ -175,8 +175,9 @@ public static String convert_str(double d, int i) {
 	}
 }
 
-public void saveToFile(File file) throws IOException {
-	FileWriter writer = new FileWriter(file);
+public void saveToFile(String filename) throws IOException {
+	File file = new File(filename);
+	Writer writer = new FileWriter(file);
 	int[] exp = this.exponents;
 	double[] coe = this.coefficients;
 	int len = exp.length;
@@ -187,8 +188,8 @@ public void saveToFile(File file) throws IOException {
 		else {
 			if (coe[i] > 0) line += "+" + convert_str(coe[i], exp[i]);
 			else line += convert_str(coe[i], exp[i]);
+			}
 		}
-	}
 	writer.write(line);
 	writer.close();
 	}

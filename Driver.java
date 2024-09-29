@@ -101,13 +101,14 @@ public class Driver {
             
             Polynomial p = new Polynomial(coeffs, exps);
             
-            File testFile = new File("test_polynomial.txt");
-            p.saveToFile(testFile);
+            String s ="test";
+            p.saveToFile(s);
+            File testfile = new File(s);
             
-            Scanner scanner = new Scanner(testFile);
+            Scanner scanner = new Scanner(testfile);
             String line = scanner.nextLine();
             scanner.close();
-            testFile.delete();
+            testfile.delete();
             
             System.out.println("---test saveToFile x-7-x2+3x3");
             System.out.println("Supposed to get: ");
